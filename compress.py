@@ -13,6 +13,11 @@ symbols = {
 
 def compress(content):
 
-    compressed_content = ''    
+    compressed_content = content  
 
-    return content
+    for key in symbols:
+        replaced = compressed_content.replace(key,symbols[key])
+        compressed_content = replaced
+    print(compressed_content)
+        
+    return compressed_content
